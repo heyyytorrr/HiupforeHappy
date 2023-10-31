@@ -1,0 +1,68 @@
+body {
+  color: white;
+  background: linear-gradient(#202040,#202060,#602080);
+}
+
+span {
+  font-size: 30px;
+}
+
+#camera,
+#result {
+  border: 2px dashed black;
+  width: 350px;
+  height: 300px;
+}
+
+#resultEmotionName,
+#resultEmotionName2 {
+  color: black;
+}
+
+.emotionName {
+  font-size: 40px;
+}
+
+.emoji {
+  font-size: 48px;
+}
+
+#TakePhotoButton {
+  margin: 10px;
+  border: none;
+  color: white;
+  width: 9em;
+  height: 3em;
+  line-height: 2em;
+  text-align: center;
+  background: linear-gradient(90deg, #202040, #202060, #602080, #B030B0);
+  background-size: 300%;
+  border-radius: 8px;
+  text-transform: uppercase;
+  cursor: pointer;
+  z-index: 1;
+}
+#TakePhotoButton:hover {
+  animation: animation 8s linear infinite;
+  border: none;
+}
+#TakePhotoButton::before {
+  content: "";
+
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+  background: linear-gradient(90deg, #202040, #202060, #602080, #B030B0);
+  background-size: 400%;
+  border-radius: 8px;
+  transition: 1s;
+}
+#TakePhotoButton:hover::before {
+  filter: blur(20px);
+}
+@keyframes animation {
+  0% {background-position: 0%;}
+  100% {background-position: 400%;}
+}
